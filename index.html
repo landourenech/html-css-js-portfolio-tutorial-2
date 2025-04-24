@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio LANDOU-NZUZI Mechack Renech</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">LANDOU-NZUZI Mechack Renech</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">À propos</a></li>
+          <li><a href="#experience">Compétences</a></li>
+          <li><a href="#projects">Projets</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">LANDOU-NZUZI Mechack Renech</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">À propos</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Compétences</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projets</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/profile-pic.jpeg" alt="LANDOU-NZUZI Mechack Renech photo de profil" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Bonjour, je suis</p>
+        <h1 class="title">LANDOU-NZUZI Mechack Renech</h1>
+        <p class="section__text__p2">Développeur Frontend & Coach Formateur</p>
+        <div class="btn-container">
+          <button class="btn btn-color-2" onclick="window.open('./assets/cv.pdf')">
+            Télécharger CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="Profil LinkedIn"
+            class="icon"
+            onclick="location.href='https://www.linkedin.com/in/landou'"
+          />
+          <img
+            src="./assets/github.png"
+            alt="Profil Github"
+            class="icon"
+            onclick="location.href='https://github.com/landourenech'"
+          />
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <p class="section__text__p1">En savoir plus</p>
+      <h1 class="title">À propos de moi</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="./assets/profile-pic-2.jpeg"
+            alt="Photo de profil"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img src="./assets/experience.png" alt="Expérience" class="icon" />
+              <h3>Expérience</h3>
+              <p>Coach formateur chez Agooue Labs<br />Développeur Frontend</p>
+            </div>
+            <div class="details-container">
+              <img src="./assets/education.png" alt="Éducation" class="icon" />
+              <h3>Éducation</h3>
+              <p>Formation continue en développement web et mobile</p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              Passionné par le développement web et mobile, j’accompagne les entreprises et les apprenants dans la réalisation de projets innovants. Coach formateur à Agooue Labs, j’interviens sur des technologies modernes telles que ReactJS, NextJS, VueJS, AngularJS, et bien d’autres. J’aime partager mes connaissances et contribuer à des solutions participatives.
+            </p>
+          </div>
+        </div>
+      </div>
+      <img src="./assets/arrow.png" alt="Flèche" class="icon arrow" onclick="location.href='./#experience'" />
+    </section>
+    <section id="experience">
+      <p class="section__text__p1">Découvrez mes</p>
+      <h1 class="title">Compétences</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Développement Frontend</h2>
+            <div class="article-container">
+              <article>
+                <img src="./assets/checkmark.png" alt="Expérience" class="icon" />
+                <div>
+                  <h3>JavaScript</h3>
+                  <p>Avancé</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/checkmark.png" alt="Expérience" class="icon" />
+                <div>
+                  <h3>TypeScript</h3>
+                  <p>Avancé</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/checkmark.png" alt="Expérience" class="icon" />
+                <div>
+                  <h3>ReactJS / NextJS</h3>
+                  <p>Avancé</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/checkmark.png" alt="Expérience" class="icon" />
+                <div>
+                  <h3>VueJS / AngularJS</h3>
+                  <p>Intermédiaire</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/checkmark.png" alt="Expérience" class="icon" />
+                <div>
+                  <h3>Expo JS</h3>
+                  <p>Intermédiaire</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/checkmark.png" alt="Expérience" class="icon" />
+                <div>
+                  <h3>TailwindCSS / Figma</h3>
+                  <p>Avancé</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-title">Développement Backend & Autres</h2>
+            <div class="article-container">
+              <article>
+                <img src="./assets/checkmark.png" alt="Expérience" class="icon" />
+                <div>
+                  <h3>ExpressJS</h3>
+                  <p>Intermédiaire</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/checkmark.png" alt="Expérience" class="icon" />
+                <div>
+                  <h3>Firebase</h3>
+                  <p>Intermédiaire</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img src="./assets/arrow.png" alt="Flèche" class="icon arrow" onclick="location.href='./#projects'" />
+    </section>
+    <section id="projects">
+      <p class="section__text__p1">Découvrez mes</p>
+      <h1 class="title">Projets</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="./assets/meteo.png" alt="Weather App" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">Weather App</h2>
+            <p>Application météo</p>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/landourenech'">
+                Github
+              </button>
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://weather-app-madza.netlify.app/'">
+                Démo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="./assets/olo.png" alt="OloStore" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">OloStore</h2>
+            <p>Application e-commerce</p>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/landourenech'">
+                Github
+              </button>
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://olostore.vercel.app/'">
+                Démo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="./assets/coach.png" alt="25 Janvier" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">25 Janvier</h2>
+            <p>Événement du coach Sylver Boussomba</p>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/landourenech'">
+                Github
+              </button>
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://25janvier.vercel.app/'">
+                Démo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="./assets/papa.png" alt="Paparene" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">Paparene</h2>
+            <p>Application web de contribution participative</p>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/landourenech'">
+                Github
+              </button>
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://paparene.vercel.app/'">
+                Démo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="./assets/pointeur.png" alt="Pointeur" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">Pointeur</h2>
+            <p>Application de pointage pour entreprise</p>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/landourenech'">
+                Github
+              </button>
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://pointeur.vercel.app/'">
+                Démo
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img src="./assets/arrow.png" alt="Flèche" class="icon arrow" onclick="location.href='./#contact'" />
+    </section>
+    <section id="contact">
+      <p class="section__text__p1">Contactez-moi</p>
+      <h1 class="title">Contact</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img src="./assets/email.png" alt="Email" class="icon contact-icon email-icon" />
+          <p><a href="mailto:landourenech@gmail.com">landourenech@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img src="./assets/linkedin.png" alt="LinkedIn" class="icon contact-icon" />
+          <p><a href="https://www.linkedin.com/in/landou">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">À propos</a></li>
+            <li><a href="#experience">Compétences</a></li>
+            <li><a href="#projects">Projets</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2025 LANDOU-NZUZI Mechack Renech. Tous droits réservés.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
