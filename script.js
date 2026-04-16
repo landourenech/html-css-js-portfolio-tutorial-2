@@ -1,9 +1,4 @@
-function toggleMenu() {
-    const menu = document.querySelector(".menu-links");
-    const icon = document.querySelector(".hamburger-icon");
-    menu.classList.toggle("open");
-    icon.classList.toggle("open");
-  }// Fonction pour le menu mobile (déjà existante)
+// Fonction pour le menu mobile
 function toggleMenu() {
   const menu = document.querySelector(".menu-links");
   const icon = document.querySelector(".hamburger-icon");
@@ -11,86 +6,70 @@ function toggleMenu() {
   icon.classList.toggle("open");
 }
 
-// 1. DONNÉES DES COMPÉTENCES
+// 1. DONNÉES DES COMPÉTENCES (Mises à jour)
 const skills = {
-  frontend: ["JavaScript / TypeScript", "ReactJS (Native/DOM)", "Three.js / 3D", "VueJS / NextJS"],
-  backend: ["Node.js", "SQL / ORM (Relationnel)", "Architecture API", "DevOps & Déploiement"]
+    frontend: [  "JavaScript / TypeScript", 
+        "ReactJS (Native/DOM)", 
+        "Three.js / 3D", 
+        "VueJS / NextJS"],
+    backend: ["Node JS",
+        "SQL / ORM (Relationnel)", 
+        "Architecture API", 
+        "DevOps & Déploiement",
+        "Langage C",
+        "Langage C++"],
+    marketing: ["Canva", "Photoshop", "Création de contenu", "Stratégie Digitale"],
+    tools: ["Airtable", "Bureautique", "Gestion de projet", "Curiosité / Apprentissage"]
 };
 
 // 2. DONNÉES DES PROJETS
 const projects = [
   {
-    title: "Weather App",
-    desc: "Application météo (React/API)",
-    img: "./assets/meteo.png",
-    github: "https://github.com",
-    demo: "https://netlify.app"
-  },
-    {
     title: "eMairie",
-    desc: "la mairie en ligne pour faciliter les démarches administratives des citoyens gabonais ",
-    img: "./assets/mairie.png", // Assure-toi d'avoir l'image
+    desc: "Mairie en ligne pour faciliter les démarches administratives au Gabon.",
+    img: "./assets/mairie.png",
     github: "https://github.com",
     demo: "https://emairie.vercel.app/"
   },
-   {
+  {
     title: "EKOLI",
-    desc: "Platerfome educative",
-    img: "./assets/ekoli.png", // Assure-toi d'avoir l'image
+    desc: "Plateforme éducative moderne.",
+    img: "./assets/ekoli.png",
     github: "https://github.com",
     demo: "https://ekoli.vercel.app/"
   },
   {
-    title: "OloStore",
-    desc: "E-commerce (Next.js/Stripe)",
-    img: "./assets/olo.png",
-    github: "https://github.com",
-    demo: "https://vercel.app"
-  },
-  {
     title: "GPM",
-    desc: "Gabon Port Management (GPM) est un acteur clé dans la gestion portuaire et logistique au Gabon.",
-    img: "./assets/2.png", // Assure-toi d'avoir l'image
+    desc: "Gestion portuaire et logistique au Gabon.",
+    img: "./assets/2.png",
     github: "https://github.com",
     demo: "https://gpm-jet.vercel.app/"
   },
   {
-    title: "Clinique Espoir",
-    desc: "Site vitrine pour une clinique au Gabon (VueJS)",
-    img: "./assets/espoir.png",
-    github: "https://github.com",
-    demo: "https://clinique-espoir.vercel.app/"
-  },{
-    title: "Dashboard Admin",
-    desc: "Gestion de données (VueJS)",
-    img: "./assets/project-4.png",
-    github: "https://github.com",
-    demo: "#"
-  }
-    ,
-    {
     title: "L'Agence matrimoniale",
-    desc: "ntrez dans un univers où chaque rencontre est une œuvre d'art, protégée par le sceau de l'exclusivité.",
+    desc: "Univers exclusif de rencontres haut de gamme.",
     img: "./assets/3.png",
     github: "https://github.com",
     demo: "https://agence-matrimoniale.vercel.app/"
   },
-    {
+  {
     title: "ADN INGINEERING",
-    desc: "Bureau d'études spécialisé en géotechnique, topographie et infrastructures au Gabon",
+    desc: "Bureau d'études spécialisé en géotechnique et infrastructures.",
     img: "./assets/1.png",
     github: "https://github.com",
     demo: "https://adn-ingineering.vercel.app/"
   }
-
-  
-  // Tu peux ajouter autant de projets que tu veux ici !
 ];
 
-// FONCTION POUR INJECTER LES COMPÉTENCES
+// FONCTION POUR INJECTER TOUTES LES COMPÉTENCES
 function displaySkills() {
-  const frontContainer = document.getElementById('skills-frontend');
-  const backContainer = document.getElementById('skills-backend');
+  // On définit les IDs correspondants dans ton HTML
+  const categories = {
+    'skills-frontend': skills.frontend,
+    'skills-backend': skills.backend,
+    'skills-marketing': skills.marketing,
+    'skills-tools': skills.tools
+  };
 
   const createSkillHTML = (skill) => `
     <article>
@@ -98,13 +77,19 @@ function displaySkills() {
       <div><h3>${skill}</h3></div>
     </article>`;
 
-  frontContainer.innerHTML = skills.frontend.map(createSkillHTML).join('');
-  backContainer.innerHTML = skills.backend.map(createSkillHTML).join('');
+  // On boucle sur chaque catégorie pour remplir le HTML
+  Object.keys(categories).forEach(id => {
+    const container = document.getElementById(id);
+    if (container) {
+      container.innerHTML = categories[id].map(createSkillHTML).join('');
+    }
+  });
 }
 
 // FONCTION POUR INJECTER LES PROJETS
 function displayProjects() {
   const projectGrid = document.getElementById('projects-grid');
+  if (!projectGrid) return;
   
   projectGrid.innerHTML = projects.map(p => `
     <div class="details-container color-container">
